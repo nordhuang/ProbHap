@@ -3,6 +3,14 @@ import os
 import re
 import argparse
 
+#add this two lines for solving 
+#Traceback (most recent call last):
+#  File "libprism/eval/evaluator.py", line 6, in <module>
+#    from libprism.common.stats import N50
+#ImportError: No module named common.stats
+#If you install Prism before ProbHap
+import sys
+sys.path.insert(0,os.path.split(os.path.split(os.path.split(os.path.abspath(sys.argv[0]))[0])[0])[0])
 from libprism.common.stats import N50
 
 ###############################################################################
